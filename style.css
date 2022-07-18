@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: teal;
+}
+.nav{
+    height: 12vh;
+    list-style: none ;
+    display: flex;
+    justify-content: space-between;
+}
+.logo img{
+    height: 10vh;
+    width: 15vw;
+    padding-left: 2vw;
+}
+.nav h1{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    padding-top: 2vh;
+    letter-spacing: 3px;
+}
+.icons i{
+    color: white;
+    padding-top: 2vh;
+    padding-right: 2vw;
+}
+.main{
+    background-color: white;
+    width: 60vw;
+    height: 60vh;
+    margin: auto;
+    margin-top: 8vh;
+    border-radius: 12px;
+    padding: 5vh 2vw;
+}
+.main #input{
+    z-index: -999;
+    opacity: 0;
+    position: absolute;
+}
+.border{
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 2vh 1vw;
+}
+.border .content{
+    overflow-y: auto;
+}
+.content{
+    margin-bottom: 2vh;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all ;
+    font-family: 'Quicksand', sans-serif;
+    height: 35vh;
+    font-size: 20px;
+}
+.content span{
+    position: relative;
+}
+.content span.correct{
+    color: darkgreen;
+}
+.content span.incorrect{
+    color: red;
+    background-color: pink;
+    outline: 1px solid white;    
+    border-radius: 4px;
+}
+.content span.active{
+    color: aqua;
+}
+.content span.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background-color: aqua;
+    animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink{
+    50%{
+        opacity: 1;
+    }
+}
+/* .content p {
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all ;
+    font-family: 'Quicksand', sans-serif;
+    height: 35vh;
+    
+} */
+.content::-webkit-scrollbar{
+    width: 0;
+}
+.slots{
+    border-top: 1px solid gray;
+    font-family: 'Quicksand', sans-serif;
+}
+.slot ul{
+    display: flex;
+    list-style: none;
+    margin-top: 2vh;
+    justify-content: space-between;
+}
+ .slot ul li{
+    display: flex;
+    margin: 0 1vw;   
+}
+.slot ul li span{
+    padding: 0 .1vw;
+}
+.slot ul li:not(:first-child){
+    border-left: 1px solid gray;
+    padding-left: 2vw;
+}
+.slot ul button{
+    border: none;
+    outline: none;
+    width: 4vw;
+    height: 4vh;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
